@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  reader1:
+    build: .
+    volumes:
+      - reader-mvn-repo:/root/.m2
+    environment:
+      MQTT_HOST: 192.168.88.133
+      MQTT_PORT: 1883
+      MQTT_CLIENT_ID: reader1
+      READER_HOST: 192.168.11.134
+
+volumes:
+  reader-mvn-repo: null
